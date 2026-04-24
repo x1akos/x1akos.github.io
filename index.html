@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balogh Ákos | Szakmai Portfólió</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* FELUGRÓ ABLAK (MODAL) STÍLUSAI */
+        .modal {
+            display: none; /* Alapértelmezetten rejtve van */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Sötétített háttér */
+            backdrop-filter: blur(5px); /* Homályosítás a háttéren */
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Középre igazítás */
+            width: 80%;
+            height: 85%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            padding: 20px 10px 10px 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #e74c3c;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: #c0392b;
+        }
+
+        #pdfFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">BALOGH<b>ÁKOS</b></div>
+        <hr class="nav-divider">
+        <a href="#kezdolap" class="nav-link"><i class="fa fa-home"></i> Kezdőlap</a>
+        <button class="dropdown-btn">
+            <i class="fa fa-graduation-cap"></i> Portfóliók
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <button class="sub-dropdown-btn">11. évfolyam <i class="fa fa-caret-down"></i></button>
+            <div class="sub-dropdown-container">
+                <a href="11_elektronika.pdf" class="pdf-link">Elektronika</a>
+				<a href="11_meresi.pdf" class="pdf-link">Mérési jegyzőkönyv</a>
+                <a href="11_mikrovezerlo.pdf" class="pdf-link">Mikrovezérlő programozás</a>
+                <a href="11_programozas.pdf" class="pdf-link">Programozás alapjai</a>
+                <a href="11_digitalis.pdf" class="pdf-link">Digitális áramkörök</a>
+            </div>
+            <button class="sub-dropdown-btn">12. évfolyam <i class="fa fa-caret-down"></i></button>
+            <div class="sub-dropdown-container">
+                <a href="12_adatbazis.pdf" class="pdf-link">Adatbáziskezelés alapjai</a>
+                <a href="12_halozat.pdf" class="pdf-link">Hálózatkezelés</a>
+                <a href="12_plc.pdf" class="pdf-link">PLC programozás</a>
+                <a href="12_szimulacio.pdf" class="pdf-link">Számítógépes szimuláció</a>
+            </div>
+            <button class="sub-dropdown-btn">13. évfolyam <i class="fa fa-caret-down"></i></button>
+            <div class="sub-dropdown-container">
+                <a href="13_nyelv.pdf" class="pdf-link">Munkavállalói idegen nyelv</a>
+                <a href="13_iot.pdf" class="pdf-link">IoT</a>
+                <a href="13_program.pdf" class="pdf-link">Programfejlesztés</a>
+                <a href="13_robot.pdf" class="pdf-link">Robottechnika CAD/CAM</a>
+            </div>
+        </div>
+        <a href="#kapcsolat" class="nav-link"><i class="fa fa-envelope"></i> Kapcsolat</a>
+    </div>
+
+    <div class="main-content">
+        <section id="kezdolap" class="hero-section">
+            <div class="intro-card">
+                <div class="profile-area">
+                    <img src="profil.jpg" alt="Balogh Ákos fotója" class="profile-img">
+                </div>
+                <div class="text-area">
+                    <span class="badge">Szakmai Bemutatkozás</span>
+                    <h1>Üdvözöllek az oldalamon!</h1>
+                    <p>
+                        Ezen az oldalon bemutatom mindazokat a munkáimat, amelyeket a hároméves tanulmányaim során készítettem.
+                        A projektek jól tükrözik a szakmai fejlődésemet és azt az utat, amelyet a kezdeti feladatoktól a komplexebb,
+                        önálló munkákig bejártam.
+                    </p>
+                    <p>
+                        Célom, hogy átfogó képet adjak a tudásomról, a gondolkodásmódomról és a megszerzett tapasztalataimról.
+                        Minden egyes munka egy fontos mérföldkövet jelent a fejlődésemben.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-header" id="evf11"><h2><i class="fa fa-microchip"></i> 11. évfolyam</h2></div>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <h3>Elektronika</h3>
+                <p>Mérési jegyzőkönyvek és alapok.</p>
+                <a href="11_elektronika.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+			<div class="project-card">
+                <h3>Mérési jegyzőkönyv</h3>
+                <p>Elektronikai számítások.</p>
+                <a href="11_meresi.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Mikrovezérlő programozás</h3>
+                <p>Arduino és C++ projektek.</p>
+                <a href="11_mikrovezerlo.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Programozás alapjai</h3>
+                <p>Algoritmusok és struktúrák.</p>
+                <a href="11_programozas.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Digitális áramkörök</h3>
+                <p>Logikai tervezés és kapuk.</p>
+                <a href="11_digitalis.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+        </div>
+
+        <div class="section-header" id="evf12"><h2><i class="fa fa-database"></i> 12. évfolyam</h2></div>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <h3>Adatbáziskezelés</h3>
+                <p>SQL lekérdezések és tervezés.</p>
+                <a href="12_adatbazis.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Hálózatkezelés</h3>
+                <p>Cisco konfigurációk és protokollok.</p>
+                <a href="12_halozat.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>PLC programozás</h3>
+                <p>Ipari automatizálási feladatok.</p>
+                <a href="12_plc.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Szimuláció</h3>
+                <p>Matematikai és logikai modellek.</p>
+                <a href="12_szimulacio.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+        </div>
+
+        <div class="section-header" id="evf13"><h2><i class="fa fa-robot"></i> 13. évfolyam</h2></div>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <h3>Munkavállalói nyelv</h3>
+                <p>Szakmai kommunikáció angolul.</p>
+                <a href="13_nyelv.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>IoT</h3>
+                <p>Okos eszközök és szenzorhálózatok.</p>
+                <a href="13_iot.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Programfejlesztés</h3>
+                <p>Komplex szoftveres megoldások.</p>
+                <a href="13_program.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+            <div class="project-card">
+                <h3>Robottechnika CAD/CAM</h3>
+                <p>Tervezés és gyártástámogatás.</p>
+                <a href="13_robot.pdf" class="view-btn pdf-link">Megtekintés</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Modal elemek kiválasztása
+            const modal = document.getElementById("pdfModal");
+            const pdfFrame = document.getElementById("pdfFrame");
+            const closeBtn = document.getElementById("closeModal");
+            
+            // Az összes PDF link kiválasztása
+            const pdfLinks = document.querySelectorAll('.pdf-link');
+
+            // Kattintás esemény hozzáadása minden PDF linkhez
+            pdfLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault(); // Megakadályozza a lap újratöltését vagy új fül nyitását
+                    const pdfUrl = this.getAttribute("href"); // Lekérjük a PDF elérési útját
+                    pdfFrame.src = pdfUrl; // Beállítjuk az iframe forrását a PDF-re
+                    modal.style.display = "block"; // Megjelenítjük a felugró ablakot
+                });
+            });
+
+            // Bezárás gombra kattintva
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+                pdfFrame.src = ""; // Kiürítjük a forrást, hogy ne pazaroljon memóriát
+            });
+
+            // Ha az ablakon kívülre (a sötétített háttérre) kattintanak, akkor is záruljon be
+            window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    pdfFrame.src = "";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
